@@ -60,10 +60,8 @@ def remove_from_list():
 def show_list(items):
     clear_screen()
     print("Here's your list:")
-    index = 1
-    for item in items:
-        print("{}. {}".format(index, item))
-        index += 1
+    for group in enumerate(items, start=1):
+        print("{}. {}".format(*group))
     print("-" * 10)
 
 # Call show_help function at the beginning of the app
